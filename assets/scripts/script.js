@@ -77,6 +77,7 @@ function startQuiz() {
     var answerItem4 = document.createElement("li");
     answerItem4.textContent = currentQuestion.answer4;
     answerList.append(answerItem4);
+    console.log(currentQuestion.correctAnswer);
 
 
     // var answerOne = document.createElement("button");
