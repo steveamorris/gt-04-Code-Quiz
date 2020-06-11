@@ -11,19 +11,24 @@
         <link rel="stylesheet" href="./assets/css/style.css">
     </head>
     <body>
-        <h1>Hello World</h1>
         <div class="container">
             <div class="row">
-                <div class="col">
+                <div class="col" style="text-align: left;">
+                    <h2 id="view-high-scores">View High Scores</h2>
 
                 </div>
-                <div class="col">
+                <div class="col" style="text-align: right;">
+                    <div id="seconds">60</div>
 
                 </div>
             </div>
             <div class="row">
-                <div class="col-sm-3" style="background-color: aquamarine;"></div>
-                <div class="col-sm-6">
+                <div class="col-sm-3"></div>
+                <div id="main-section" class="col-sm-6 text-center" style="background-color: aquamarine;">
+                    <h2>Coding Quiz Challenge</h2>
+                    <p>Try to answer the following code-related questions within the time limit.  Keep in mind that incorrect answers will penalize your score/time by 10 seconds.</p>
+                    <hr>
+                    <button id="start-button">Start</button>
 
                 </div>
                 <div class="col-sm-3"></div>
