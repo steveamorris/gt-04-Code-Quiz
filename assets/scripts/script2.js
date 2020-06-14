@@ -2,6 +2,7 @@ console.log("JS is linked");
 
 // Variables
     var startBtn = document.getElementById("start-button");
+    var questionDiv = document.getElementById("start-screen");
 
     // Variable for Questions Objects
     var arrayOfQuestions = [
@@ -32,7 +33,7 @@ console.log("JS is linked");
         },
     ];
     // Variable for current question
-    var currentQuestion = 0;
+    var currentQuestionNumber = 0;
     // Variable for timer
     var timerEl = document.getElementById("timer");
 
@@ -40,6 +41,20 @@ console.log("JS is linked");
 
 
 // Functions
+function displayQnA() {
+    console.log(arrayOfQuestions[0].question);
+    // Must clear start-screen div
+    questionDiv.textContent = "";
+    var questionEl = document.createElement("h1");
+    questionEl.textContent = arrayOfQuestions[currentQuestionNumber].question;
+    questionDiv.append(questionEl);
+    var answerEl = document.createElement("div");
+    for (var i = 0; i < arrayOfQuestions.length - 1; i++){
+        console.log(arrayOfQuestions[currentQuestionNumber].answerArray[i]);
+        answerEl.append(arrayOfQuestions[currentQuestionNumber].answerArray[i]);
+        questionDiv.append(answerEl);
+    }
+}
 
 
 
@@ -51,4 +66,5 @@ console.log("JS is linked");
 // Event Listeners
 startBtn.addEventListener("click", function() {
     console.log("Start Button Clicked");
+    displayQnA();
 })
