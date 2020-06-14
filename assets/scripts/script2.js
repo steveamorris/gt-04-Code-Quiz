@@ -48,10 +48,14 @@ function displayQnA() {
     var questionEl = document.createElement("h1");
     questionEl.textContent = arrayOfQuestions[currentQuestionNumber].question;
     questionDiv.append(questionEl);
-    var answerEl = document.createElement("div");
-    for (var i = 0; i < arrayOfQuestions.length - 1; i++){
-        console.log(arrayOfQuestions[currentQuestionNumber].answerArray[i]);
-        answerEl.append(arrayOfQuestions[currentQuestionNumber].answerArray[i]);
+    
+    for (var i = 0; i < arrayOfQuestions[currentQuestionNumber].answerArray.length; i++){
+        var answerEl = document.createElement("div");
+        answerEl.setAttribute("class", "text-left");
+        var answerBtn = document.createElement("button");
+        answerEl.append(answerBtn)
+        // console.log(arrayOfQuestions[currentQuestionNumber].answerArray[i]);
+        answerBtn.textContent = arrayOfQuestions[currentQuestionNumber].answerArray[i];
         questionDiv.append(answerEl);
     }
 }
